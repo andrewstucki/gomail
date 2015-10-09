@@ -1,0 +1,3 @@
+echo '{"body": "test", "id": "12efa1321", "recipientCount": 10000, "from": "test@gmail.com", "subject": "Test send"}' > messages.txt && for i in {1..10000}; do echo "{\"to\": \"subscriber${i}@sink.localhost\", \"id\": \"${i}\"}"; done >> messages.txt
+
+echo '{"body": "test2", "id": "12efa1322", "recipientCount": 10000, "from": "test@gmail.com", "subject": "Test 2 send"}' > messages2.txt && for i in {1..10000}; do echo "{\"to\": \"subscriber${i}@sink.localhost\", \"id\": \"${i}\"}"; done >> messages2.txt
